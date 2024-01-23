@@ -1,4 +1,5 @@
 import React from 'react'
+import FoodBox from '../FoodBox/FoodBox'
 
 
 const Home = () => {
@@ -6,8 +7,17 @@ const Home = () => {
     <div className="z-0 w-full">
         <img src="./background/food.jpg" alt="" />
         
-        <div className="flex z-10 flex-row flex-wrap items-center justify-between">
-            abcc
+        <div className="flex flex-row flex-wrap items-center justify-center">
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
+            <FoodBox/>
         </div>
     </div>
   )
