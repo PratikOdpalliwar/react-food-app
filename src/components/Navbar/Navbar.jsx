@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-   <div className="shadow-2xl h-32 w-full px-10 py-5 bg-slate-800 font-mono">
+   <div className="shadow-2xl h-32 w-full px-10 py-5 bg-gray-800 font-mono">
 
 <div className="h-1/2 m-2 flex flex-row justify-between items-center ">
        
@@ -12,7 +12,7 @@ const Navbar = () => {
         src="./logo/burger.png" alt="hamburger" />
 
        <h1 className='font-bold text-xl'>
-        <span className="text-black">
+        <span className="text-white">
             The
         </span>
         <span className="text-red-500">
@@ -22,7 +22,7 @@ const Navbar = () => {
         </div> 
 
         <input type="text"
-        placeholder='Search Food...' className="border-2 border-black w-22 rounded px-2" />
+        placeholder='Search Food...' className="border-2 border-violet-500 w-22 rounded px-2" />
     </div>
 
     <div className="h-1/2 flex flex-row justify-center items-center m-2">
