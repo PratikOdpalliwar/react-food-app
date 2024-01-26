@@ -21,11 +21,11 @@ const Navbar = () => {
        </h1>
         </div> 
 
-        <input type="text"
-        placeholder='Search Food...' className="border-2 border-violet-500 w-22 rounded px-2" />
+        {/* <input type="text"
+        placeholder='Search Food...' className="border-2 border-violet-500 w-22 rounded px-2" /> */}
     </div>
 
-    <div className="h-1/2 flex flex-row justify-center items-center m-2">
+    {/* <div className="h-1/2 flex flex-row justify-center items-center m-2">
         <button className="w-20 h-6 m-2 p-3 bg-red-500 text-white font-bold flex justify-center items-center font-sans rounded text-sm">
             All
         </button>
@@ -38,7 +38,7 @@ const Navbar = () => {
         <button className="w-20 h-6 m-2 p-3 bg-red-500 text-white font-bold flex justify-center items-center font-sans rounded text-sm">
             Dinner
         </button>
-    </div>
+    </div> */}
 </div>
   )
 }
