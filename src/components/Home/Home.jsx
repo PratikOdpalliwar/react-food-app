@@ -5,18 +5,26 @@ import axios from "axios";
 const Home = () => {
 
   const [timeoutId, setTimeoutId]= useState()
+  const [recipeList, setRecipeList]= useState([])
 
   const APP_ID = "f45be75f";
   const APP_KEY = "eb8835dec73ecf5b688e2efcde87221d";
 
   
-  const fetchRecipe = (searchString) => {
-    axios.get(
+  const fetchRecipe = async (searchString) => {
+   const response = await axios.get(
       `https://api.edamam.com/search?q=${searchString}&app_id=${APP_ID}&app_key=${APP_KEY}`,
-    ).then(function (response){
-      console.log(response);
-    })
+    )
+    setRecipeList(response.data.hits)
   };
+  // 2nd METHOD
+  // const fetchRecipe = (searchString) => {
+  //   axios.get(
+  //      `https://api.edamam.com/search?q=${searchString}&app_id=${APP_ID}&app_key=${APP_KEY}`,
+  //    ).then(function (response){
+  //       console.log(response);
+  //    })
+  //  };
 
 const onTextChange=(event)=>{
   clearTimeout(timeoutId)
@@ -37,20 +45,11 @@ const onTextChange=(event)=>{
         />
       </div>
 
-      <div className="flex flex-row flex-wrap items-center justify-center">
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
-        <FoodBox /> 
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
-        <FoodBox />
+      <div className="flex flex-row flex-wrap items-center justify-center lg:justify-around">
+        
+{recipeList.length && recipeList.map((recipeObj) =>
+ (<FoodBox recipeObj = {recipeObj.recipe}/>
+ ))}
 
       </div>
     </div>
